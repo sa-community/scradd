@@ -36,7 +36,7 @@ jobs:
               run: if [[ `git status --porcelain` ]]; then exit 1; fi
 
             - name: Commit
-              uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5.2.0
+              uses: stefanzweifel/git-auto-commit-action@778341af668090896ca464160c2def5d1d1a3eb0 # v6.0.1
               with:
                   commit_message: Format
 
@@ -52,13 +52,13 @@ jobs:
                   repository: ${{github.event.pull_request.head.repo.full_name}}
 
             - name: Setup CodeQL
-              uses: github/codeql-action/init@60168efe1c415ce0f5521ea06d5c2062adbeed1b # v3.28.17
+              uses: github/codeql-action/init@51f77329afa6477de8c49fc9c7046c15b9a4e79d # v3.29.5
               with:
                   languages: javascript
                   queries: security-and-quality
 
             - name: Analyze
-              uses: github/codeql-action/analyze@60168efe1c415ce0f5521ea06d5c2062adbeed1b # v3.28.17
+              uses: github/codeql-action/analyze@51f77329afa6477de8c49fc9c7046c15b9a4e79d # v3.29.5
 
     build:
         name: Build & Test
