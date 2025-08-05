@@ -5,11 +5,15 @@ import { client, columnize } from "strife.js";
 
 import constants from "../../common/constants.ts";
 import pkg from "../../package.json" with { type: "json" };
+import assert from "node:assert";
 
 const dependencyColumns = await getDependencies();
 
 export default async function info(interaction: ChatInputCommandInteraction): Promise<void> {
-	const message = await interaction.deferReply({ fetchReply: true });
+	const response = await interaction.deferReply({ withResponse: true });
+	const message = response.resource?.message;
+	assert(message);
+
 	const owner = getOwner();
 	await interaction.editReply({
 		content: "",

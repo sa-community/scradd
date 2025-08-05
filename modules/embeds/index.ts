@@ -25,7 +25,6 @@ defineEvent("messageCreate", async (message) => {
 });
 
 defineEvent("messageUpdate", async (_, message) => {
-	if (message.partial) return;
 
 	const found = sentEmbeds.get(message.id);
 	if (!found && +"0" < 1 /* TODO: only return if there's new messages */) return;
