@@ -1,5 +1,3 @@
-import type { AutocompleteInteraction } from "discord.js";
-
 import addons from "@sa-community/addons-data" with { type: "json" };
 import scratchAddons from "@sa-community/addons-data/manifest.json" with { type: "json" };
 import {
@@ -34,7 +32,7 @@ defineChatCommand(
 
 		options: {
 			addon: {
-				autocomplete(interaction: AutocompleteInteraction) {
+				autocomplete(interaction) {
 					return matchSorter(
 						addons,
 						interaction.options.getString("addon") ?? "",
