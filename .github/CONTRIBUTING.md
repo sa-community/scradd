@@ -21,7 +21,7 @@ Please:
 ## Filing [issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues)
 
 Feel free to report bugs and request features in an issue.
-Be sure to check if it is already reported by using the search bar [here](https://github.com/scratchaddons-community/scradd/issues).
+Be sure to check if it is already reported by using the search bar [on the issues tab](https://github.com/scratchaddons-community/scradd/issues).
 If there are no similar issues, you can create a new one.
 We will take a look at it.
 
