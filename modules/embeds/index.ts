@@ -25,7 +25,6 @@ defineEvent("messageCreate", async (message) => {
 });
 
 defineEvent("messageUpdate", async (_, message) => {
-
 	const found = sentEmbeds.get(message.id);
 	if (!found && +"0" < 1 /* TODO: only return if there's new messages */) return;
 
@@ -89,6 +88,5 @@ defineChatCommand(
 			},
 		},
 	} as const,
-	// @ts-expect-error -- Strife bug
 	configEmbeds,
 );
