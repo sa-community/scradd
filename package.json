@@ -48,9 +48,9 @@
 	},
 	"overrides": {
 		"@discordjs/builders": "~1.10.1",
-		"@discordjs/collection": "1.5.3",
+		"@discordjs/collection": "2.1.1",
 		"@discordjs/formatters": "~0.6.1",
-		"@discordjs/ws": "~1.2.2",
+		"@discordjs/ws": "~2.0.0",
 		"@sapphire/snowflake": "3.5.3",
 		"discord-api-types": "0.37.119",
 		"fast-deep-equal": "3.1.3",
