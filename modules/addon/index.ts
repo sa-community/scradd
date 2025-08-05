@@ -2,7 +2,13 @@ import type { AutocompleteInteraction } from "discord.js";
 
 import addons from "@sa-community/addons-data" with { type: "json" };
 import scratchAddons from "@sa-community/addons-data/manifest.json" with { type: "json" };
-import { ApplicationCommandOptionType, ButtonStyle, ComponentType, hyperlink } from "discord.js";
+import {
+	ApplicationCommandOptionType,
+	ButtonStyle,
+	ComponentType,
+	hyperlink,
+	MessageFlags,
+} from "discord.js";
 import { matchSorter } from "match-sorter";
 import { defineChatCommand, escapeAllMarkdown } from "strife.js";
 
@@ -50,8 +56,7 @@ defineChatCommand(
 		if (!addon || !addonId) {
 			await interaction.reply({
 				content: `${constants.emojis.statuses.no} Could not find a matching addon!`,
-
-				ephemeral: true,
+				flags: MessageFlags.Ephemeral,
 			});
 
 			return;
