@@ -30,7 +30,7 @@ defineEvent("guildMemberRemove", async (member) => {
 	if (member.guild.id !== guild?.id) return;
 
 	const roles = Object.fromEntries(
-		Object.entries(PERSISTED_ROLES).map(([key, id]) => [key, !!member.roles.resolve(id)]),
+		Object.entries(PERSISTED_ROLES).map(([key, id]) => [key, !!member.roles.cache.get(id)]),
 	);
 	await RoleList.findOneAndUpdate({ id: member.id }, roles, {
 		upsert: Object.values(roles).includes(true),
