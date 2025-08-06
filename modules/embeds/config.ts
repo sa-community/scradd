@@ -55,7 +55,7 @@ export default async function configEmbeds(
 						type: ComponentType.TextDisplay,
 						content: `**Enabled**: ${constants.emojis.statuses[config.enabled ? "yes" : "no"]}`,
 					},
-					{ type: ComponentType.TextDisplay, content: `## Channel Overrides` },
+					{ type: ComponentType.TextDisplay, content: "## Channel Overrides" },
 					{
 						type: ComponentType.TextDisplay,
 						content:

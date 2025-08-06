@@ -30,7 +30,7 @@ export default {
 	themeColor: env === "production" ? 0xff_7b_26 : 0x17_5e_f8,
 
 	urls: {
-		addonImages: `https://scratchaddons.com/assets/img/addons`,
+		addonImages: "https://scratchaddons.com/assets/img/addons",
 		scradd:
 			env === "production" || !process.env.PORT ?
 				"https://scradd.up.railway.app"
@@ -39,7 +39,7 @@ export default {
 		scratchApi: "https://api.scratch.mit.edu",
 		/** @deprecated */
 		scratchdb: "https://scratchdb.lefty.one/v3",
-		settings: `https://scratch.mit.edu/scratch-addons-extension/settings`,
+		settings: "https://scratch.mit.edu/scratch-addons-extension/settings",
 	},
 
 	users: { bot: "929928324959055932" },
