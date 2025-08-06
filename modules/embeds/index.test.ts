@@ -65,7 +65,9 @@ await describe("htmlToMarkdown", async () => {
 				// eslint-disable-next-line unicorn/string-content
 				'<blockquote>Chill = <a href="https://freemusicarchive.org/music/Chris_Zabriskie/Vendaface/05_-_Air_Hockey_Saloon">Air Hockey Salon</a> by Chris Zabriskie (CC-BY)<br>Bossa Nova = <a href="https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600055">BossaBossa</a> by Kevin MacLeod (CC-BY)<br></blockquote>Source: <a href="https://github.com/LLK/scratch-gui/pull/3385">https://github.com/LLK/scratch-gui/pull/3385</a>',
 			),
-			"\n> Chill = [Air Hockey Salon](https://freemusicarchive.org/music/Chris_Zabriskie/Vendaface/05_-_Air_Hockey_Saloon) by Chris Zabriskie (CC-BY)\n> Bossa Nova = [BossaBossa](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600055) by Kevin MacLeod (CC-BY)\nSource: [https://github.com/LLK/scratch-gui/pull/3385](https://github.com/LLK/scratch-gui/pull/3385)",
+			"\n> Chill = [Air Hockey Salon](https://freemusicarchive.org/music/Chris_Zabriskie/Vendaface/05_-_Air_Hockey_Saloon) by Chris Zabriskie (CC-BY)\n"
+				+ "> Bossa Nova = [BossaBossa](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600055) by Kevin MacLeod (CC-BY)\n"
+				+ "Source: [https://github.com/LLK/scratch-gui/pull/3385](https://github.com/LLK/scratch-gui/pull/3385)",
 		);
 	});
 });
