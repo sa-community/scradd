@@ -12,7 +12,7 @@
 		"lint": "eslint",
 		"serve": "nodemon --env-file .env --enable-source-maps . --ext js,json",
 		"start": "node --enable-source-maps .",
-		"test": "node --run build && node --enable-source-maps --test"
+		"test": "node --run build && cd dist && node --enable-source-maps --test"
 	},
 	"browserslist": [
 		"chrome 80",
