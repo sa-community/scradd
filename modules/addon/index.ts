@@ -87,6 +87,7 @@ defineChatCommand(
 						credit.link ?? interaction.channel?.url ?? "",
 						("note" in credit && credit.note) || "",
 					)
+				:	credit.name,
 			) ?? [],
 		);
 
