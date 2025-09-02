@@ -1,7 +1,7 @@
 import { strictEqual } from "node:assert";
 import { describe, it } from "node:test";
 
-import addons from "@sa-community/addons-data" with { type: "json" };
+import addons from "@sa-community/addons-data";
 import { matchSorter } from "match-sorter";
 
 import { addonSearchOptions } from "./index.ts";
