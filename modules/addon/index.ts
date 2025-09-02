@@ -1,4 +1,4 @@
-import addons from "@sa-community/addons-data" with { type: "json" };
+import addons from "@sa-community/addons-data";
 import scratchAddons from "@sa-community/addons-data/manifest.json" with { type: "json" };
 import {
 	ApplicationCommandOptionType,
@@ -81,11 +81,11 @@ defineChatCommand(
 
 		const credits = new Intl.ListFormat().format(
 			addon.credits?.map((credit) =>
-				credit.note || credit.link ?
+				credit.link || ("note" in credit && credit.note) ?
 					hyperlink(
 						credit.name,
 						credit.link ?? interaction.channel?.url ?? "",
-						credit.note ?? "",
+						("note" in credit && credit.note) || "",
 					)
 				:	credit.name,
 			) ?? [],
