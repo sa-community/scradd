@@ -1,5 +1,5 @@
-import addons from "@sa-community/addons-data" with { type: "json" };
-import scratchAddons from "@sa-community/addons-data/manifest.json";
+import addons from "@sa-community/addons-data";
+import scratchAddons from "@sa-community/addons-data/manifest.json" with { type: "json" };
 import {
 	ApplicationCommandOptionType,
 	ButtonStyle,
