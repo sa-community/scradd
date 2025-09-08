@@ -25,7 +25,7 @@
 		"@sa-community/addons-data": "1043.0.0",
 		"discord.js": "14.22.1",
 		"match-sorter": "8.1.0",
-		"mongoose": "8.18.0",
+		"mongoose": "8.18.1",
 		"posthtml-parser": "0.12.1",
 		"strife.js": "4.4.0"
 	},
