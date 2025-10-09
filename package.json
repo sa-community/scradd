@@ -23,7 +23,7 @@
 	"prettier": "@redguy12/prettier-config",
 	"dependencies": {
 		"@sa-community/addons-data": "1043.0.0",
-		"discord.js": "14.22.1",
+		"discord.js": "14.23.2",
 		"match-sorter": "8.1.0",
 		"mongoose": "8.19.0",
 		"posthtml-parser": "0.12.1",
