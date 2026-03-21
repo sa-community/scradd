@@ -95,12 +95,12 @@ export default async function linkScratchRole(
 	const { username } = await fetch(
 		`https://auth-api.itinerary.eu.org/auth/verifyToken/${encodeURI(scratchToken)}`,
 	).then((verification) => verification.json() as Promise<{ username: string | null }>);
-	const scratch = username && (await fetchUser(username));
-	// if (!scratch)
-	// 	return response.writeHead(401, { "content-type": "text/html" }).end(
-	// 		// eslint-disable-next-line unicorn/string-content
-	// 		`<meta http-equiv="refresh" content="0;url=${getScratchUrl(tokenData.refresh_token)}">`,
-	// 	);
+	if (!username)
+		return response.writeHead(401, { "content-type": "text/html" }).end(
+			// eslint-disable-next-line unicorn/string-content
+			`<meta http-equiv="refresh" content="0;url=${getScratchUrl(tokenData.refresh_token)}">`,
+		);
+	const scratch = await fetchUser(username);
 
 	(await client.rest.put(Routes.userApplicationRoleConnection(client.user.id), {
 		body: JSON.stringify({
