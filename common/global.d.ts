@@ -47,13 +47,13 @@ declare global {
 
 	namespace NodeJS {
 		/**
-		 * @example
-		 * 	BOT_TOKEN = …
-		 * 	MONGO_URI = mongodb://127.0.0.1:27017/scradd
-		 * 	NODE_ENV = development
-		 * 	PORT = 80
-		 * 	CLIENT_SECRET = …
-		 * 	EXIT_AUTH = …
+		 * ```ini
+		 * BOT_TOKEN = …
+		 * MONGO_URI = mongodb://127.0.0.1:27017/scradd
+		 * NODE_ENV = development
+		 * PORT = 80
+		 * CLIENT_SECRET = …
+		 * ```
 		 */
 		interface ProcessEnv {
 			/** Token of the bot. */
