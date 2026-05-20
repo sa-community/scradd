@@ -30,7 +30,7 @@ jobs:
                   package-manager-cache: false
 
             - name: Install
-              run: npm install
+              run: npm ci
 
             - name: Set version
               run: npm pkg set version="$(date +"%y.%m.%d")-$(git rev-parse --short HEAD)"
