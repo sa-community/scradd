@@ -138,7 +138,7 @@ const secretKey = randomBytes(32);
 function encodeString(text: string): string {
 	const iv = randomBytes(16);
 	const cipher = createCipheriv("aes-256-cbc", secretKey, iv);
-	const encrypted = cipher.update(text, "utf8", "hex") + cipher.final("hex");
+	const encrypted = cipher.update(text, "utf-8", "hex") + cipher.final("hex");
 	return `${iv.toString("hex")}:${encrypted}`;
 }
 
@@ -148,6 +148,6 @@ function decodeString(encryptedText: string): string | undefined {
 		const parts = encryptedText.split(":");
 		const iv = Buffer.from(parts.shift() ?? "", "hex");
 		const decipher = createDecipheriv("aes-256-cbc", secretKey, iv);
-		return decipher.update(parts.join(":"), "hex", "utf8") + decipher.final("utf8");
+		return decipher.update(parts.join(":"), "hex", "utf-8") + decipher.final("utf-8");
 	} catch {}
 }
