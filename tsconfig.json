@@ -10,6 +10,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"incremental": true,
 		"isolatedModules": true,
+		"lib": ["ES2025"],
 		"module": "NodeNext",
 		"moduleDetection": "force",
 		"noEmitOnError": true,
