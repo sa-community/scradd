@@ -225,7 +225,7 @@ export async function handleForumPost(
 		post.editor ?
 			`\n\n*Last edited by ${post.editor} (${time(
 				new Date(post.time.edited),
-				TimestampStyles.ShortDateTime,
+				TimestampStyles.LongDateShortTime,
 			)})*`
 		:	"";
 
