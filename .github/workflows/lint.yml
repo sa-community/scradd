@@ -13,7 +13,7 @@ concurrency:
 jobs:
     format:
         name: Format
-        runs-on: ubuntu-24.04
+        runs-on: ubuntu-26.04
         permissions:
             contents: write # Needed to push
             actions: write # Allow formatting actions too
@@ -47,7 +47,7 @@ jobs:
 
     analyze:
         name: Analyze
-        runs-on: ubuntu-24.04
+        runs-on: ubuntu-26.04
         permissions:
             security-events: write # Used by github/codeql-action
 
@@ -68,7 +68,7 @@ jobs:
 
     build:
         name: Build & Test
-        runs-on: ubuntu-24.04
+        runs-on: ubuntu-26.04
 
         steps:
             - name: Checkout
@@ -89,7 +89,7 @@ jobs:
 
     lint:
         name: Lint
-        runs-on: ubuntu-24.04
+        runs-on: ubuntu-26.04
 
         steps:
             - name: Checkout
