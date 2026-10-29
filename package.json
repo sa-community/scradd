@@ -26,7 +26,7 @@
 		"discord.js": "14.27.0",
 		"match-sorter": "8.3.0",
 		"mongoose": "9.6.3",
-		"posthtml-parser": "0.12.1",
+		"posthtml-parser": "0.13.0",
 		"strife.js": "4.4.0"
 	},
 	"devDependencies": {
